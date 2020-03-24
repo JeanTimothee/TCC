@@ -3,8 +3,10 @@ class CreateStudents < ActiveRecord::Migration[6.0]
     create_table :students do |t|
       t.string :first_name
       t.string :last_name
-      t.string :phone
+      t.string :mobile_phone
+      t.string :fixed_phone
       t.string :email
+      t.integer :nb_classes, default: 1
       t.datetime :birth_date
       t.references :total_payment, null: false, foreign_key: true
       t.references :level, null: false, foreign_key: true

@@ -4,7 +4,8 @@ class CreateReferents < ActiveRecord::Migration[6.0]
       t.string :first_name
       t.string :last_name
       t.string :email
-      t.string :phone
+      t.string :mobile_phone
+      t.string :fixed_phone
 
       t.timestamps
     end
