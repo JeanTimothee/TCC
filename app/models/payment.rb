@@ -1,7 +1,8 @@
 class Payment < ApplicationRecord
-  TYPES = ["chèque", "virement", "espèce"]
-  belongs_to :total_payment
+  TYPES = ["chèque", "espèce", "virement"]
 
-  validates :amount, :time, :total_payment, presence: true
+  belongs_to :student
+
+  validates :amount, :time, :student, presence: true
   validates :type, inclusion: { in: TYPES }
 end

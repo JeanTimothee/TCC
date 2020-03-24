@@ -6,7 +6,7 @@ class CreatePayments < ActiveRecord::Migration[6.0]
       t.date :time
       t.string :period
       t.text :comment
-      t.references :total_payment, null: false, foreign_key: true
+      t.references :student, null: false, foreign_key: true
 
       t.timestamps
     end
