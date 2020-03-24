@@ -1,5 +1,5 @@
 class Level < ApplicationRecord
-  NAMES = []
+  NAMES = (1..24).to_a
 
   has_many :students
 

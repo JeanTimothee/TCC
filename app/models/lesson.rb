@@ -1,6 +1,6 @@
 class Lesson < ApplicationRecord
-  COURTS = [1, 2, 3, 4, 5]
-  CAPACITIES = [2, 3, 4, 5, 6, 7, 8, 9]
+  COURTS = (1..5).to_a
+  CAPACITIES = (2..9).to_a
 
   belongs_to :teacher
   has_many :student_lessons

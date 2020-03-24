@@ -7,4 +7,8 @@ class Student < ApplicationRecord
   has_many :preference_students
   has_many :student_lessons
   has_many :lessons, through: :student_lessons
+
+  validates :first_name, :last_name, :birth_date, :mobile_phone, presence: true
+  validates :last_name, inclusion: { scope: :first_name, :birth_date }
+  validates :nb_classes, inclusion: { in: [1, 2] }
 end
