@@ -7,8 +7,12 @@ class Lesson < ApplicationRecord
   has_many :students, through: :student_lessons
 
   validates :court, inclusion: { in: COURTS }
-  validates :capacity, inclusion: { in: CAPACITIES }
+  validates :capacity, inclusion: { in: CAPACITIES }, unless: :mini_tennis?
   validates :start_time, :end_time, :court, :teacher, presence: true
-  validates :start_time, uniqueness: { scope: :court }
+  validates :start_time, uniqueness: { scope: :court }, unless: :mini_tennis?
   validates :teacher, uniqueness: { scope: :start_time }
+
+  def mini_tennis?
+    self.mini_tennis
+  end
 end

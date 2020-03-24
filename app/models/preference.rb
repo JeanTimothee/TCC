@@ -3,5 +3,5 @@ class Preference < ApplicationRecord
   has_one :teacher
   has_one :preference_student
 
-  validates :students, presence: true
+  validates :student, presence: true
 end

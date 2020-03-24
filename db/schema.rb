@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_23_213422) do
+ActiveRecord::Schema.define(version: 2020_03_24_145853) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,22 +36,16 @@ ActiveRecord::Schema.define(version: 2020_03_23_213422) do
     t.index ["teacher_id"], name: "index_lessons_on_teacher_id"
   end
 
-  create_table "levels", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "payments", force: :cascade do |t|
     t.integer "amount"
     t.string "type"
     t.date "time"
     t.string "period"
     t.text "comment"
-    t.bigint "total_payment_id", null: false
+    t.bigint "student_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["total_payment_id"], name: "index_payments_on_total_payment_id"
+    t.index ["student_id"], name: "index_payments_on_student_id"
   end
 
   create_table "preference_students", force: :cascade do |t|
@@ -99,15 +93,13 @@ ActiveRecord::Schema.define(version: 2020_03_23_213422) do
     t.string "fixed_phone"
     t.string "email"
     t.integer "nb_classes", default: 1
+    t.integer "level"
+    t.integer "payment_due"
     t.datetime "birth_date"
-    t.bigint "total_payment_id", null: false
-    t.bigint "level_id", null: false
     t.bigint "referent_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["level_id"], name: "index_students_on_level_id"
     t.index ["referent_id"], name: "index_students_on_referent_id"
-    t.index ["total_payment_id"], name: "index_students_on_total_payment_id"
   end
 
   create_table "teachers", force: :cascade do |t|
@@ -115,12 +107,6 @@ ActiveRecord::Schema.define(version: 2020_03_23_213422) do
     t.string "last_name"
     t.string "nickname"
     t.string "phone"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "total_payments", force: :cascade do |t|
-    t.integer "due"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -139,14 +125,12 @@ ActiveRecord::Schema.define(version: 2020_03_23_213422) do
 
   add_foreign_key "availabilities", "students"
   add_foreign_key "lessons", "teachers"
-  add_foreign_key "payments", "total_payments"
+  add_foreign_key "payments", "students"
   add_foreign_key "preference_students", "students"
   add_foreign_key "preferences", "preference_students"
   add_foreign_key "preferences", "students"
   add_foreign_key "preferences", "teachers"
   add_foreign_key "student_lessons", "lessons"
   add_foreign_key "student_lessons", "students"
-  add_foreign_key "students", "levels"
   add_foreign_key "students", "referents"
-  add_foreign_key "students", "total_payments"
 end
