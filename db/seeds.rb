@@ -7,18 +7,26 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'roo'
 
-xlsx = Roo::Spreadsheet.open('../data/fichier_eleves.xlsx')
-puts xlsx.info
-xlsx = Roo::Excelx.new('../data/fichier_eleves.xlsx')
-puts xlsx.info
+puts "Destroying all Students..."
+Student.destroy_all
 
-# document.root.xpath('fichier_ttc').first do |student|
-#   last_name = student.xpath('NOM').text
-#   first_name = student.xpath('PRENOM').text
-#   mobile_phone = student.xpath('TEL PORT').text
-#   fixed_phone = student.xpath('TEL DOM').text
-#   birth_date = student.xpath('DATE DE NAISS').text
-#   email = student.xpath('E.MAIL').text
+puts "----------"
+puts ">>>> Done!"
+xlsx = Roo::Spreadsheet.open('./data/fichier_eleves.xlsx')
+xlsx = Roo::Excelx.new('./data/fichier_eleves.xlsx')
 
-#   puts "#{last_name} #{first_name}, tel:#{mobile_phone}#{"and #{fixed_phone}" unless fixed_phone.nil? } né le #{birth_date}"
-# end
+puts "Creating Students..."
+xlsx.drop(2).each do |row|
+  last_name = row[1]
+  first_name = row[2]
+  mobile_phone = row[3]
+  fixed_phone = row[4]
+  birth_date = row[5]
+  email = row[6]
+
+  student = Student.create(last_name: last_name, first_name: first_name, mobile_phone: mobile_phone, birth_date: birth_date, email: email)
+  student.save
+end
+
+puts ">>>> Done!"
+puts "#{Student.count} students created"
