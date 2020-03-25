@@ -5,3 +5,20 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'roo'
+
+xlsx = Roo::Spreadsheet.open('../data/fichier_eleves.xlsx')
+puts xlsx.info
+xlsx = Roo::Excelx.new('../data/fichier_eleves.xlsx')
+puts xlsx.info
+
+# document.root.xpath('fichier_ttc').first do |student|
+#   last_name = student.xpath('NOM').text
+#   first_name = student.xpath('PRENOM').text
+#   mobile_phone = student.xpath('TEL PORT').text
+#   fixed_phone = student.xpath('TEL DOM').text
+#   birth_date = student.xpath('DATE DE NAISS').text
+#   email = student.xpath('E.MAIL').text
+
+#   puts "#{last_name} #{first_name}, tel:#{mobile_phone}#{"and #{fixed_phone}" unless fixed_phone.nil? } né le #{birth_date}"
+# end
