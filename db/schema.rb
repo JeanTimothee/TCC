@@ -96,7 +96,7 @@ ActiveRecord::Schema.define(version: 2020_03_24_145853) do
     t.integer "level"
     t.integer "payment_due"
     t.datetime "birth_date"
-    t.bigint "referent_id", null: false
+    t.bigint "referent_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["referent_id"], name: "index_students_on_referent_id"
