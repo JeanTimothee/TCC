@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 2020_03_24_145853) do
     t.datetime "start_time"
     t.datetime "end_time"
     t.boolean "mini_tennis", default: false
-    t.bigint "teacher_id", null: false
+    t.bigint "teacher_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["teacher_id"], name: "index_lessons_on_teacher_id"
