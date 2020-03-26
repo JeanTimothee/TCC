@@ -6,7 +6,7 @@ class CreateLessons < ActiveRecord::Migration[6.0]
       t.datetime :start_time
       t.datetime :end_time
       t.boolean :mini_tennis, default: false
-      t.references :teacher, null: false, foreign_key: true
+      t.references :teacher, foreign_key: true
 
       t.timestamps
     end
