@@ -95,7 +95,7 @@ ActiveRecord::Schema.define(version: 2020_03_24_145853) do
     t.integer "nb_classes", default: 1
     t.integer "level"
     t.integer "payment_due"
-    t.datetime "birth_date"
+    t.date "birth_date"
     t.bigint "referent_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

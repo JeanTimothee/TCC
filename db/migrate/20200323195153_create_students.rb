@@ -9,7 +9,7 @@ class CreateStudents < ActiveRecord::Migration[6.0]
       t.integer :nb_classes, default: 1
       t.integer :level
       t.integer :payment_due
-      t.datetime :birth_date
+      t.date :birth_date
       t.references :referent, foreign_key: true
 
       t.timestamps
