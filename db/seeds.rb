@@ -461,7 +461,7 @@ puts "Creating Lessons..."
   student_lesson.save
 
 
-  lesson10 = Lesson.new(court: 5, start_time: "1996-01-02 15:00", end_time:"1996-01-02 15:45")
+  lesson10 = Lesson.new(court: 2, start_time: "1996-01-02 15:00", end_time:"1996-01-02 15:45")
   lesson10.teacher = teacher2
   lesson10.save!
 
@@ -502,7 +502,7 @@ puts "Creating Lessons..."
   student_lesson.save
 
 
-  lesson11 = Lesson.new(court: 5, start_time: "1996-01-02 15:45", end_time:"1996-01-02 16:30")
+  lesson11 = Lesson.new(court: 2, start_time: "1996-01-02 15:45", end_time:"1996-01-02 16:30")
   lesson11.teacher = teacher2
   lesson11.save!
 
@@ -537,7 +537,7 @@ puts "Creating Lessons..."
   student_lesson.save
 
 
-  lesson12 = Lesson.new(court: 5, start_time: "1996-01-02 16:30", end_time:"1996-01-02 17:15")
+  lesson12 = Lesson.new(court: 2, start_time: "1996-01-02 16:30", end_time:"1996-01-02 17:15")
   lesson12.teacher = teacher2
   lesson12.save!
 
@@ -573,7 +573,7 @@ puts "Creating Lessons..."
   # student_lesson.save
 
 
-  lesson13 = Lesson.new(court: 5, start_time: "1996-01-02 17:15", end_time:"1996-01-02 18:00")
+  lesson13 = Lesson.new(court: 2, start_time: "1996-01-02 17:15", end_time:"1996-01-02 18:00")
   lesson13.teacher = teacher2
   lesson13.save!
 
@@ -604,7 +604,7 @@ puts "Creating Lessons..."
   student_lesson.save
 
 
-  lesson14 = Lesson.new(court: 5, start_time: "1996-01-02 18:00", end_time:"1996-01-02 19:00")
+  lesson14 = Lesson.new(court: 2, start_time: "1996-01-02 18:00", end_time:"1996-01-02 19:00")
   lesson14.teacher = teacher2
   lesson14.save!
 
