@@ -1,4 +1,5 @@
 class Student < ApplicationRecord
+
   LEVELS = (1..26).to_a
   # LEVELS = ["C-", "C", "CC+", "C+", "C+b-", "C+B-", "B-", "B-B", "B", "BB+", "B+", "A-", "A", "A 30/5", "A 30/4", "A 30/3", "A 30/2", "A 30/1", "A 30", "A 15/5", "A 15/4", "A 15/4", "A 15/3", "A 15/2", "A 15/1", "A 15"]
   belongs_to :referent, optional: true
@@ -14,8 +15,8 @@ class Student < ApplicationRecord
   validates :nb_classes, inclusion: { in: [1, 2] }
   validates :level, inclusion: { in: LEVELS }, allow_nil: true
 
-  def age?
-    ((Time.zone.now - self.birth_date.to_time) / 1.year.seconds).floor
+  before_create do
+    self.age = (((Time.zone.now - self.birth_date.to_time) / 1.year.seconds).floor)
   end
 
   def level?
@@ -69,62 +70,6 @@ class Student < ApplicationRecord
     when level = 24
       "A 15/1"
     when level = 25
-      "A 15"
-    end
-  end
-
-  def transform_level
-    raise
-    case x
-    when 1
-      "C-"
-    when 2
-      "C"
-    when 3
-      "CC+"
-    when 4
-      "C+"
-    when 5
-      "C+b-"
-    when 6
-      "C+B-"
-    when 7
-      "B-"
-    when 8
-      "B-B"
-    when 9
-      "B"
-    when 10
-      "BB+"
-    when 11
-      "B+"
-    when 12
-      "A-"
-    when 13
-      "A"
-    when 14
-      "A 30/5"
-    when 15
-      "A 30/4"
-    when 16
-      "A 30/3"
-    when 17
-      "A 30/2"
-    when 18
-      "A 30/1"
-    when 20
-      "A 30"
-    when 19
-      "A 15/5"
-    when 22
-      "A 15/4"
-    when 23
-      "A 15/3"
-    when 24
-      "A 15/2"
-    when 25
-      "A 15/1"
-    when 26
       "A 15"
     end
   end

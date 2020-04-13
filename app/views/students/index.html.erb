@@ -440,49 +440,28 @@
 
 <div class="students-list">
 <h1>Elèves:</h1>
-  <div class="filters d-flex">
-    <div class="filter age-filters dropdown">
-      <button class="btn filter-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Age
-      </button>
-      <div class="dropdown-menu animated fadeIn" aria-labelledby="dropdownMenuButton">
-        <% @ages = [] %>
-        <% @students.each do |student| %>
-          <% @ages << student.age? %>
-        <% end %>
-        <% @ages.sort.uniq.each do |age| %>
-          <%= link_to students_path(request.query_parameters), class: "dropdown-item" do %>
-            <%= age %>ans
-          <% end %>
-        <% end %>
-      </div>
-    </div>
-    <div class="filter level-filters dropdown">
-      <button class="btn filter-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Niveau
-      </button>
-      <div class="dropdown-menu animated fadeIn" aria-labelledby="dropdownMenuButton">
-        <% levels = [] %>
-        <% @students.each do |student| %>
-          <% levels << student.level? if student.level?.present? %>
-        <% end %>
-        <% levels.uniq.sort.each do |level| %>
-          <%= link_to students_path(request.query_parameters), class: "dropdown-item" do %>
-            <%= level %>
-          <% end %>
+  <div class="search">
+    <%= form_tag students_path, method: :get, novalidate: "novalidate", class: "simple_form search"  do %>
+      <div>
+        <%= text_field_tag :query,
+            params[:query],
+            id: "search_query",
+            placeholder: "Find a student",
+            value: ""
+        %>
+        <%= select_tag :level, options_for_select(@levels), multiple: true %>
+        <%= select_tag :age, options_for_select(@ages), multiple: true %>
+        <%= button_tag(type: "submit", class: "btn btn-flat") do %>
+          <i class="fas fa-search"></i> Search
         <% end %>
       </div>
-    </div>
+    <% end %>
   </div>
 
-  <%= simple_form_for :search, url: students_path, method: "GET" do |f| %>
-    <%= f.input :level, collection: @levels, input_html: { class: "multiple-select", multiple: true } %>
-    <%= f.input :age, collection: @ages.sort.uniq, input_html: { multiple: true } %>
-    <%= f.submit %>
-  <% end %>
   <ul>
     <% @students.each do |student| %>
-    <li><%= student.last_name %> <%= student.first_name %> <%= student.age? %>ans <%= student.level? %></li>
+    <li><%= student.last_name %> <%= student.first_name %> <%= student.age %>ans <%= student.level? %></li>
     <% end %>
   </ul>
 </div>
+
