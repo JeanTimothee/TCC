@@ -19,9 +19,6 @@ gem 'webpacker'
 # xlsx parser
 gem "roo", "~> 2.8.0"
 
-# calendar
-gem "simple_calendar", "~> 2.0"
-
 group :development do
   gem 'web-console', '>= 3.3.0'
 end

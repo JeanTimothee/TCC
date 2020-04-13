@@ -440,9 +440,28 @@
 
 <div class="students-list">
 <h1>Elèves:</h1>
+  <div class="search">
+    <%= form_tag students_path, method: :get, novalidate: "novalidate", class: "simple_form search"  do %>
+      <div>
+        <%= text_field_tag :query,
+            params[:query],
+            id: "search_query",
+            placeholder: "Find a student",
+            value: ""
+        %>
+        <%= select_tag :level, options_for_select(@levels), multiple: true %>
+        <%= select_tag :age, options_for_select(@ages), multiple: true %>
+        <%= button_tag(type: "submit", class: "btn btn-flat") do %>
+          <i class="fas fa-search"></i> Search
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
   <ul>
     <% @students.each do |student| %>
-    <li><%= student.last_name %> <%= student.first_name %> <%= student.age? %>ans <%= student.level? %></li>
+    <li><%= student.last_name %> <%= student.first_name %> <%= student.age %>ans <%= student.level? %></li>
     <% end %>
   </ul>
 </div>
+

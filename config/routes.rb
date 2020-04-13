@@ -2,12 +2,8 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
-  resources :teachers, only: [:index, :new, :create, :update, :edit, :destroy]
-  resources :lessons do
-    resources :students, only: [:new, :create]
-    resources :student_lessons
-  end
-  resources :students, only: [:index, :show, :edit, :update, :destroy] do
+  resources :students, only: [:index]
+  resources :students, only: [:show] do
     resources :availabilities, only: [:new, :create, :update, :edit, :destroy]
     resources :preferences, only: [:new, :create, :update, :edit, :destroy]
     resources :referents, only: [:new, :create, :update, :edit, :destroy]
