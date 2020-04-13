@@ -19,6 +19,9 @@ gem 'webpacker'
 # xlsx parser
 gem "roo", "~> 2.8.0"
 
+# search
+gem 'pg_search'
+
 group :development do
   gem 'web-console', '>= 3.3.0'
 end

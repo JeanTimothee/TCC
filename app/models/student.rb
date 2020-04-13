@@ -19,6 +19,13 @@ class Student < ApplicationRecord
     self.age = (((Time.zone.now - self.birth_date.to_time) / 1.year.seconds).floor)
   end
 
+  include PgSearch::Model
+  pg_search_scope :search_by_first_last_name,
+    against: [:first_name, :last_name],
+    using: {
+      tsearch: { prefix: true }
+    }
+
   def level?
     case self.level
     when level = 1
