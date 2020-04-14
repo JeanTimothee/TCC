@@ -3,3 +3,5 @@ require("@rails/activestorage").start()
 require("channels")
 
 import "bootstrap";
+
+import { autocompleteSearch } from "../components/autocomplete";
