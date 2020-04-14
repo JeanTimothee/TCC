@@ -20,11 +20,11 @@ class StudentsController < ApplicationController
       @ages = @students.map do |student|
        student.age
       end
-      @ages.uniq!.sort!
+      @ages = @ages.uniq.sort!
       nb_levels = @students.map do |student|
         student.level
       end
-      nb_levels.uniq!.delete(nil)
+      nb_levels = nb_levels.uniq.filter { |item| item != nil }
       @levels = nb_levels.sort!.map do |level|
         NUMBER_LEVEL[level]
       end

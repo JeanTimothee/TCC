@@ -442,21 +442,23 @@
 <h1>Elèves:</h1>
   <div class="search">
     <%= form_tag students_path, method: :get, novalidate: "novalidate", class: "simple_form search"  do %>
-      <%= text_field_tag :query,
-          params[:query],
-          id: "search_query",
-          placeholder: "Find a student",
-          value: ""
-      %>
+      <div id="search_div" data-students="<%= Student.all.to_json %>">
+        <%= text_field_tag :query,
+            params[:query],
+            id: "search_query",
+            placeholder: "Chercher un élève",
+            value: ""
+        %>
+      </div>
       <% if @students.count > 1 %>
         <%= select_tag :level, options_for_select(@levels), multiple: true %>
         <%= select_tag :age, options_for_select(@ages), multiple: true %>
       <% end %>
       <%= button_tag(type: "submit", class: "btn btn-flat") do %>
-        <i class="fas fa-search"></i> Recherche
+        <i class="fas fa-search"></i> Filtrer
       <% end %>
     <% end %>
-    <%= link_to "Enlever filtres", students_path %>
+    <%= link_to "X Reset", students_path, class: "text-decoration-none text-reset" %>
   </div>
 
   <ul>
