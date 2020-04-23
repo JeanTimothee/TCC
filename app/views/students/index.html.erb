@@ -16,27 +16,47 @@
           <td>9H</td>
           <td>
             <% if Lesson.where({court: 1, start_time: "1996-01-02 09:00"})[0].present? %>
-              <%=  Lesson.where({court: 1, start_time: "1996-01-02 09:00"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 1, start_time: "1996-01-02 09:00"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 2, start_time: "1996-01-02 09:00"})[0].present? %>
-              <%=  Lesson.where({court: 2, start_time: "1996-01-02 09:00"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 2, start_time: "1996-01-02 09:00"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 3, start_time: "1996-01-02 09:00"})[0].present? %>
-              <%=  Lesson.where({court: 3, start_time: "1996-01-02 09:00"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 3, start_time: "1996-01-02 09:00"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 4, start_time: "1996-01-02 09:00"})[0].present? %>
-              <%=  Lesson.where({court: 4, start_time: "1996-01-02 09:00"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 4, start_time: "1996-01-02 09:00"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 5, start_time: "1996-01-02 09:00"})[0].present? %>
-              <%=  Lesson.where({court: 5, start_time: "1996-01-02 09:00"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 5, start_time: "1996-01-02 09:00"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
         </tr>
@@ -44,27 +64,47 @@
           <td>9H45</td>
           <td>
             <% if Lesson.where({court: 1, start_time: "1996-01-02 09:45"})[0].present? %>
-              <%=  Lesson.where({court: 1, start_time: "1996-01-02 09:45"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 1, start_time: "1996-01-02 09:45"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 2, start_time: "1996-01-02 09:45"})[0].present? %>
-              <%=  Lesson.where({court: 2, start_time: "1996-01-02 09:45"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 2, start_time: "1996-01-02 09:45"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 3, start_time: "1996-01-02 09:45"})[0].present? %>
-              <%=  Lesson.where({court: 3, start_time: "1996-01-02 09:45"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 3, start_time: "1996-01-02 09:45"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 4, start_time: "1996-01-02 09:45"})[0].present? %>
-              <%=  Lesson.where({court: 4, start_time: "1996-01-02 09:45"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 4, start_time: "1996-01-02 09:45"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 5, start_time: "1996-01-02 09:45"})[0].present? %>
-              <%=  Lesson.where({court: 5, start_time: "1996-01-02 09:45"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 5, start_time: "1996-01-02 09:45"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
         </tr>
@@ -72,27 +112,47 @@
           <td>10H30</td>
           <td>
             <% if Lesson.where({court: 1, start_time: "1996-01-02 10:30"})[0].present? %>
-              <%=  Lesson.where({court: 1, start_time: "1996-01-02 10:30"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 1, start_time: "1996-01-02 10:30"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 2, start_time: "1996-01-02 10:30"})[0].present? %>
-              <%=  Lesson.where({court: 2, start_time: "1996-01-02 10:30"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 2, start_time: "1996-01-02 10:30"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 3, start_time: "1996-01-02 10:30"})[0].present? %>
-              <%=  Lesson.where({court: 3, start_time: "1996-01-02 10:30"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 3, start_time: "1996-01-02 10:30"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 4, start_time: "1996-01-02 10:30"})[0].present? %>
-              <%=  Lesson.where({court: 4, start_time: "1996-01-02 10:30"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 4, start_time: "1996-01-02 10:30"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 5, start_time: "1996-01-02 10:30"})[0].present? %>
-              <%=  Lesson.where({court: 5, start_time: "1996-01-02 10:30"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 5, start_time: "1996-01-02 10:30"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
         </tr>
@@ -100,27 +160,47 @@
           <td>11H15</td>
           <td>
             <% if Lesson.where({court: 1, start_time: "1996-01-02 11:15"})[0].present? %>
-              <%=  Lesson.where({court: 1, start_time: "1996-01-02 11:15"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 1, start_time: "1996-01-02 11:15"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 2, start_time: "1996-01-02 11:15"})[0].present? %>
-              <%=  Lesson.where({court: 2, start_time: "1996-01-02 11:15"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 2, start_time: "1996-01-02 11:15"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 3, start_time: "1996-01-02 11:15"})[0].present? %>
-              <%=  Lesson.where({court: 3, start_time: "1996-01-02 11:15"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 3, start_time: "1996-01-02 11:15"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 4, start_time: "1996-01-02 11:15"})[0].present? %>
-              <%=  Lesson.where({court: 4, start_time: "1996-01-02 11:15"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 4, start_time: "1996-01-02 11:15"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 5, start_time: "1996-01-02 11:15"})[0].present? %>
-              <%=  Lesson.where({court: 5, start_time: "1996-01-02 11:15"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 5, start_time: "1996-01-02 11:15"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
         </tr>
@@ -128,27 +208,47 @@
           <td>12H</td>
           <td>
             <% if Lesson.where({court: 1, start_time: "1996-01-02 12:00"})[0].present? %>
-              <%=  Lesson.where({court: 1, start_time: "1996-01-02 12:00"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 1, start_time: "1996-01-02 12:00"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 2, start_time: "1996-01-02 12:00"})[0].present? %>
-              <%=  Lesson.where({court: 2, start_time: "1996-01-02 12:00"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 2, start_time: "1996-01-02 12:00"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 3, start_time: "1996-01-02 12:00"})[0].present? %>
-              <%=  Lesson.where({court: 3, start_time: "1996-01-02 12:00"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 3, start_time: "1996-01-02 12:00"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 4, start_time: "1996-01-02 12:00"})[0].present? %>
-              <%=  Lesson.where({court: 4, start_time: "1996-01-02 12:00"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 4, start_time: "1996-01-02 12:00"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 5, start_time: "1996-01-02 12:00"})[0].present? %>
-              <%=  Lesson.where({court: 5, start_time: "1996-01-02 12:00"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 5, start_time: "1996-01-02 12:00"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
         </tr>
@@ -156,27 +256,47 @@
           <td>12H45</td>
           <td>
             <% if Lesson.where({court: 1, start_time: "1996-01-02 12h45"})[0].present? %>
-              <%=  Lesson.where({court: 1, start_time: "1996-01-02 12h45"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 1, start_time: "1996-01-02 12h45"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 2, start_time: "1996-01-02 12h45"})[0].present? %>
-              <%=  Lesson.where({court: 2, start_time: "1996-01-02 12h45"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 2, start_time: "1996-01-02 12h45"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 3, start_time: "1996-01-02 12h45"})[0].present? %>
-              <%=  Lesson.where({court: 3, start_time: "1996-01-02 12h45"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 3, start_time: "1996-01-02 12h45"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 4, start_time: "1996-01-02 12h45"})[0].present? %>
-              <%=  Lesson.where({court: 4, start_time: "1996-01-02 12h45"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 4, start_time: "1996-01-02 12h45"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 5, start_time: "1996-01-02 12h45"})[0].present? %>
-              <%=  Lesson.where({court: 5, start_time: "1996-01-02 12h45"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 5, start_time: "1996-01-02 12h45"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
         </tr>
@@ -184,27 +304,47 @@
           <td>13H30</td>
           <td>
             <% if Lesson.where({court: 1, start_time: "1996-01-02 13:30"})[0].present? %>
-              <%=  Lesson.where({court: 1, start_time: "1996-01-02 13:30"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 1, start_time: "1996-01-02 13:30"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 2, start_time: "1996-01-02 13:30"})[0].present? %>
-              <%=  Lesson.where({court: 2, start_time: "1996-01-02 13:30"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 2, start_time: "1996-01-02 13:30"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 3, start_time: "1996-01-02 13:30"})[0].present? %>
-              <%=  Lesson.where({court: 3, start_time: "1996-01-02 13:30"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 3, start_time: "1996-01-02 13:30"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 4, start_time: "1996-01-02 13:30"})[0].present? %>
-              <%=  Lesson.where({court: 4, start_time: "1996-01-02 13:30"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 4, start_time: "1996-01-02 13:30"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 5, start_time: "1996-01-02 13:30"})[0].present? %>
-              <%=  Lesson.where({court: 5, start_time: "1996-01-02 13:30"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 5, start_time: "1996-01-02 13:30"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
         </tr>
@@ -212,27 +352,47 @@
           <td>14H15</td>
           <td>
             <% if Lesson.where({court: 1, start_time: "1996-01-02 14:15"})[0].present? %>
-              <%=  Lesson.where({court: 1, start_time: "1996-01-02 14:15"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 1, start_time: "1996-01-02 14:15"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 2, start_time: "1996-01-02 14:15"})[0].present? %>
-              <%=  Lesson.where({court: 2, start_time: "1996-01-02 14:15"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 2, start_time: "1996-01-02 14:15"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 3, start_time: "1996-01-02 14:15"})[0].present? %>
-              <%=  Lesson.where({court: 3, start_time: "1996-01-02 14:15"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 3, start_time: "1996-01-02 14:15"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 4, start_time: "1996-01-02 14:15"})[0].present? %>
-              <%=  Lesson.where({court: 4, start_time: "1996-01-02 14:15"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 4, start_time: "1996-01-02 14:15"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 5, start_time: "1996-01-02 14:15"})[0].present? %>
-              <%=  Lesson.where({court: 5, start_time: "1996-01-02 14:15"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 5, start_time: "1996-01-02 14:15"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
         </tr>
@@ -240,27 +400,47 @@
           <td>15H</td>
           <td>
             <% if Lesson.where({court: 1, start_time: "1996-01-02 15:00"})[0].present? %>
-              <%=  Lesson.where({court: 1, start_time: "1996-01-02 15:00"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 1, start_time: "1996-01-02 15:00"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 2, start_time: "1996-01-02 15:00"})[0].present? %>
-              <%=  Lesson.where({court: 2, start_time: "1996-01-02 15:00"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 2, start_time: "1996-01-02 15:00"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 3, start_time: "1996-01-02 15:00"})[0].present? %>
-              <%=  Lesson.where({court: 3, start_time: "1996-01-02 15:00"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 3, start_time: "1996-01-02 15:00"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 4, start_time: "1996-01-02 15:00"})[0].present? %>
-              <%=  Lesson.where({court: 4, start_time: "1996-01-02 15:00"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 4, start_time: "1996-01-02 15:00"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 5, start_time: "1996-01-02 15:00"})[0].present? %>
-              <%=  Lesson.where({court: 5, start_time: "1996-01-02 15:00"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 5, start_time: "1996-01-02 15:00"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
         </tr>
@@ -268,27 +448,47 @@
           <td>15H45</td>
           <td>
             <% if Lesson.where({court: 1, start_time: "1996-01-02 15:45"})[0].present? %>
-              <%=  Lesson.where({court: 1, start_time: "1996-01-02 15:45"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 1, start_time: "1996-01-02 15:45"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 2, start_time: "1996-01-02 15:45"})[0].present? %>
-              <%=  Lesson.where({court: 2, start_time: "1996-01-02 15:45"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 2, start_time: "1996-01-02 15:45"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 3, start_time: "1996-01-02 15:45"})[0].present? %>
-              <%=  Lesson.where({court: 3, start_time: "1996-01-02 15:45"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 3, start_time: "1996-01-02 15:45"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 4, start_time: "1996-01-02 15:45"})[0].present? %>
-              <%=  Lesson.where({court: 4, start_time: "1996-01-02 15:45"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 4, start_time: "1996-01-02 15:45"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 5, start_time: "1996-01-02 15:45"})[0].present? %>
-              <%=  Lesson.where({court: 5, start_time: "1996-01-02 15:45"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 5, start_time: "1996-01-02 15:45"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
         </tr>
@@ -296,27 +496,47 @@
           <td>16H30</td>
           <td>
             <% if Lesson.where({court: 1, start_time: "1996-01-02 16:30"})[0].present? %>
-              <%=  Lesson.where({court: 1, start_time: "1996-01-02 16:30"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 1, start_time: "1996-01-02 16:30"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 2, start_time: "1996-01-02 16:30"})[0].present? %>
-              <%=  Lesson.where({court: 2, start_time: "1996-01-02 16:30"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 2, start_time: "1996-01-02 16:30"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 3, start_time: "1996-01-02 16:30"})[0].present? %>
-              <%=  Lesson.where({court: 3, start_time: "1996-01-02 16:30"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 3, start_time: "1996-01-02 16:30"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 4, start_time: "1996-01-02 16:30"})[0].present? %>
-              <%=  Lesson.where({court: 4, start_time: "1996-01-02 16:30"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 4, start_time: "1996-01-02 16:30"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 5, start_time: "1996-01-02 16:30"})[0].present? %>
-              <%=  Lesson.where({court: 5, start_time: "1996-01-02 16:30"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 5, start_time: "1996-01-02 16:30"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
         </tr>
@@ -324,27 +544,47 @@
           <td>17H15</td>
           <td>
             <% if Lesson.where({court: 1, start_time: "1996-01-02 17:15"})[0].present? %>
-              <%=  Lesson.where({court: 1, start_time: "1996-01-02 17:15"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 1, start_time: "1996-01-02 17:15"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 2, start_time: "1996-01-02 17:15"})[0].present? %>
-              <%=  Lesson.where({court: 2, start_time: "1996-01-02 17:15"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 2, start_time: "1996-01-02 17:15"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 3, start_time: "1996-01-02 17:15"})[0].present? %>
-              <%=  Lesson.where({court: 3, start_time: "1996-01-02 17:15"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 3, start_time: "1996-01-02 17:15"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 4, start_time: "1996-01-02 17:15"})[0].present? %>
-              <%=  Lesson.where({court: 4, start_time: "1996-01-02 17:15"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 4, start_time: "1996-01-02 17:15"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 5, start_time: "1996-01-02 17:15"})[0].present? %>
-              <%=  Lesson.where({court: 5, start_time: "1996-01-02 17:15"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 5, start_time: "1996-01-02 17:15"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
         </tr>
@@ -352,27 +592,47 @@
           <td>18H</td>
           <td>
             <% if Lesson.where({court: 1, start_time: "1996-01-02 18:00"})[0].present? %>
-              <%=  Lesson.where({court: 1, start_time: "1996-01-02 18:00"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 1, start_time: "1996-01-02 18:00"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 2, start_time: "1996-01-02 18:00"})[0].present? %>
-              <%=  Lesson.where({court: 2, start_time: "1996-01-02 18:00"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 2, start_time: "1996-01-02 18:00"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 3, start_time: "1996-01-02 18:00"})[0].present? %>
-              <%=  Lesson.where({court: 3, start_time: "1996-01-02 18:00"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 3, start_time: "1996-01-02 18:00"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 4, start_time: "1996-01-02 18:00"})[0].present? %>
-              <%=  Lesson.where({court: 4, start_time: "1996-01-02 18:00"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 4, start_time: "1996-01-02 18:00"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 5, start_time: "1996-01-02 18:00"})[0].present? %>
-              <%=  Lesson.where({court: 5, start_time: "1996-01-02 18:00"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 5, start_time: "1996-01-02 18:00"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
         </tr>
@@ -380,27 +640,47 @@
           <td>19H</td>
           <td>
             <% if Lesson.where({court: 1, start_time: "1996-01-02 19:00"})[0].present? %>
-              <%=  Lesson.where({court: 1, start_time: "1996-01-02 19:00"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 1, start_time: "1996-01-02 19:00"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 2, start_time: "1996-01-02 19:00"})[0].present? %>
-              <%=  Lesson.where({court: 2, start_time: "1996-01-02 19:00"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 2, start_time: "1996-01-02 19:00"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 3, start_time: "1996-01-02 19:00"})[0].present? %>
-              <%=  Lesson.where({court: 3, start_time: "1996-01-02 19:00"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 3, start_time: "1996-01-02 19:00"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 4, start_time: "1996-01-02 19:00"})[0].present? %>
-              <%=  Lesson.where({court: 4, start_time: "1996-01-02 19:00"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 4, start_time: "1996-01-02 19:00"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 5, start_time: "1996-01-02 19:00"})[0].present? %>
-              <%=  Lesson.where({court: 5, start_time: "1996-01-02 19:00"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 5, start_time: "1996-01-02 19:00"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
         </tr>
@@ -408,27 +688,47 @@
           <td>20H</td>
           <td>
             <% if Lesson.where({court: 1, start_time: "1996-01-02 20:00"})[0].present? %>
-              <%=  Lesson.where({court: 1, start_time: "1996-01-02 20:00"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 1, start_time: "1996-01-02 20:00"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 2, start_time: "1996-01-02 20:00"})[0].present? %>
-              <%=  Lesson.where({court: 2, start_time: "1996-01-02 20:00"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 2, start_time: "1996-01-02 20:00"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 3, start_time: "1996-01-02 20:00"})[0].present? %>
-              <%=  Lesson.where({court: 3, start_time: "1996-01-02 20:00"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 3, start_time: "1996-01-02 20:00"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 4, start_time: "1996-01-02 20:00"})[0].present? %>
-              <%=  Lesson.where({court: 4, start_time: "1996-01-02 20:00"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 4, start_time: "1996-01-02 20:00"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
           <td>
             <% if Lesson.where({court: 5, start_time: "1996-01-02 20:00"})[0].present? %>
-              <%=  Lesson.where({court: 5, start_time: "1996-01-02 20:00"})[0].teacher.nickname %>
+              <% lesson = Lesson.where({court: 5, start_time: "1996-01-02 20:00"})[0] %>
+              <button data-toggle="modal" data-target="#lesson-modal" data-lesson-court="<%= lesson.court%>" data-lesson-time="<%= lesson.start_time.strftime("%A %H:%M") %>" data-lesson-teacher="<%= lesson.teacher.nickname %>" data-lesson-students="<%= lesson.students.to_json %>" class="btn-lesson-modal">
+                <%=  lesson.students.count %>prs
+                <%=  lesson.average_level %>
+              </button>
             <% end %>
           </td>
         </tr>
@@ -467,3 +767,4 @@
     <% end %>
   </ul>
 </div>
+<%= render 'lesson_modal' %>

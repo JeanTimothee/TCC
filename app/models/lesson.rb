@@ -15,4 +15,11 @@ class Lesson < ApplicationRecord
   def mini_tennis?
     self.mini_tennis
   end
+
+  def average_level
+    levels = self.students.map do |student|
+      student.level
+    end
+    NUMBER_LEVEL[(levels.sum / levels.count).floor]
+  end
 end
